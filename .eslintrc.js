@@ -86,5 +86,6 @@ module.exports = {
     // 'react/jsx-props-no-spreading': 0,
     // 限制文件扩展名
     'react/jsx-filename-extension': [2, { extensions: ['.jsx', '.tsx'] }],
+    'import/no-extraneous-dependencies': ['error', { devDependencies: true }],
   },
 }
