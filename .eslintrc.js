@@ -52,7 +52,7 @@ module.exports = {
     @typescript-eslint/eslint-plugin: Typescript辅助Eslint的插件
   */
   plugins: ['react', 'react-hooks', '@typescript-eslint'],
-  // 手动自定义代码规范。可以覆盖掉extends的配置
+  // 手动自定义代码规范。可以覆盖掉extends的配置, 0 - off(关闭) 1 - warn (检查并警告) 2 - error(检查并报错)
   rules: {
     ...a11yOff,
     camelcase: 'off',
@@ -60,15 +60,17 @@ module.exports = {
     'react-hooks/rules-of-hooks': 'error',
     // 检查 effect 的依赖
     'react-hooks/exhaustive-deps': 'warn',
-    'no-undef': 'off',
+    // 不能正确处理文件后缀名,需要关闭
     'import/extensions': 'off',
+    // 只有一个导出值时 需要使用 export default，
     'import/prefer-default-export': 0,
+    // 规定不能引入本地找不到的模块。
     'import/no-unresolved': 0,
     // 不允许重复的变量名，包括重复的变量和TS类型名
     'no-redeclare': 'off',
     '@typescript-eslint/no-redeclare': 'error',
     // 不允许作用域内部有跟外部一样的变量名，但是从实际应用出发，对于如下变量允许存在同名变量
-    'no-shadow': 'off',
+    // 'no-shadow': 'off',
     '@typescript-eslint/no-shadow': ['error'],
     // 不允许定义前使用变量，但是对于function和Class，可以先使用再声明，
     'no-use-before-define': 'off',
@@ -76,11 +78,12 @@ module.exports = {
     // 警告未使用的变量，实际业务中存在某些变量先声明，但暂时未使用的情况。
     'no-unused-vars': 'off',
     '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '^_' }],
-    //
+    // 默认props
     'react/require-default-props': 'off',
-    // 防止在react组件定义中缺少props验证
-    'react/prop-types': 0,
-    'react/jsx-props-no-spreading': 0,
+    // 规定每一个组件都应该声明 PropTypes。
+    // 'react/prop-types': 0,
+    // props使用扩展语法
+    // 'react/jsx-props-no-spreading': 0,
     // 限制文件扩展名
     'react/jsx-filename-extension': [2, { extensions: ['.jsx', '.tsx'] }],
   },

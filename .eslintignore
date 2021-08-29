@@ -1,4 +1,5 @@
 node_modules
 dist
 mock/**
+*.d.ts
 vite.config.ts
