@@ -3,3 +3,4 @@ dist
 mock/**
 *.d.ts
 vite.config.ts
+polyfill.js
