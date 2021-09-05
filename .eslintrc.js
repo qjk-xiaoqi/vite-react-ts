@@ -56,6 +56,8 @@ module.exports = {
   rules: {
     ...a11yOff,
     camelcase: 'off',
+    // 禁用未声明的变量
+    'no-undef': 'off',
     // 检查 Hook 的规则
     'react-hooks/rules-of-hooks': 'error',
     // 检查 effect 的依赖

@@ -2,8 +2,10 @@
   "name": "vite_react_ts",
   "version": "0.0.0",
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --mode development",
     "build": "tsc && vite build",
+    "build:beta": "tsc && vite build --mode beta",
+    "build:release": "tsc && vite build --mode release",
     "serve": "vite preview",
     "type-check": "tsc --noEmit --skipLibCheck",
     "lint": "npx eslint . --ext .js,.jsx,.ts,.tsx",
@@ -14,12 +16,14 @@
     "classnames": "^2.3.1",
     "dayjs": "^1.10.6",
     "react": "^17.0.0",
-    "react-dom": "^17.0.0"
+    "react-dom": "^17.0.0",
+    "react-router": "^5.2.1"
   },
   "devDependencies": {
     "@types/node": "^16.7.5",
     "@types/react": "^17.0.0",
     "@types/react-dom": "^17.0.0",
+    "@types/react-router": "^5.1.16",
     "@typescript-eslint/eslint-plugin": "^4.29.3",
     "@typescript-eslint/parser": "^4.29.3",
     "@vitejs/plugin-legacy": "^1.5.1",

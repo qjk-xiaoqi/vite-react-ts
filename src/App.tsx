@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import './App.css'
 
+console.log(import.meta.env)
 function App() {
   const [count, setCount] = useState(0)
   return (
