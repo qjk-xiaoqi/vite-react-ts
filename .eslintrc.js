@@ -72,7 +72,7 @@ module.exports = {
     'no-redeclare': 'off',
     '@typescript-eslint/no-redeclare': 'error',
     // 不允许作用域内部有跟外部一样的变量名，但是从实际应用出发，对于如下变量允许存在同名变量
-    // 'no-shadow': 'off',
+    'no-shadow': 'off',
     '@typescript-eslint/no-shadow': ['error'],
     // 不允许定义前使用变量，但是对于function和Class，可以先使用再声明，
     'no-use-before-define': 'off',

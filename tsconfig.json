@@ -2,6 +2,12 @@
   "compilerOptions": {
     "target": "ESNext",
     "lib": ["DOM", "DOM.Iterable", "ESNext"],
+    "baseUrl": "./",                       // 用于解析非相对模块名称的基目录
+    "paths": {
+      "@/*": [
+        "src/*"
+      ],
+    },   
     "allowJs": false,
     "skipLibCheck": false,
     "esModuleInterop": false,
